@@ -1,0 +1,20 @@
+<?xml version='1.0' encoding='utf-8'?>
+<plugin id="com.lichanglong.ibaicai" version="1.0.0" xmlns="http://apache.org/cordova/ns/plugins/1.0" xmlns:android="http://schemas.android.com/apk/res/android">
+    <name>ibaicai</name>
+    <js-module name="ibaicai" src="www/ibaicai.js">
+        <clobbers target="cordova.plugins.ibaicai" />
+    </js-module>
+
+    <!-- iOS -->
+    <platform name="ios">
+    
+        <header-file src="src/ios/ibaicai.h" />
+        <source-file src="src/ios/ibaicai.m" />
+
+        <config-file target="config.xml" parent="/*">
+            <feature name="ibaicai">
+                <param name="ios-package" value="ibaicai" />
+            </feature>
+        </config-file>
+    </platform>
+</plugin>
